@@ -1,0 +1,10 @@
+{
+	"discordToken":"ABCDEFGHIJKLMNOP12345678",
+	"slackToken":"xoxb-ABCDEFGHJIKLMNOP1234567890",
+	"mirrors":[
+		{
+			"discord": 00000000000000000,
+			"slack":"ABCDEF0123456"
+		}
+	]
+}
