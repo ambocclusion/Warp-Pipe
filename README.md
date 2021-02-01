@@ -7,9 +7,9 @@ This is a bot that mirrors chat messages from a Discord channel over to a Slack 
 This requires Python 3 to run.
 This uses the following pip packages:
 
-discord.py
-slackclient
-webpreview
+discord.py<br />
+slackclient<br />
+webpreview<br />
 
 ## How to use
 
