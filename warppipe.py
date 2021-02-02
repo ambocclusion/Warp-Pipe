@@ -14,8 +14,19 @@ intents = discord.Intents.default()
 intents.members = True
 client = discord.Client(intents=intents)
 
-with open(configfile, 'rb') as j:
-    config = json.load(j)
+if os.getenv('DISCORDTOKEN') != None:
+    config = {}
+    config['discordToken'] = os.getenv('DISCORDTOKEN')
+    config['slackToken'] = os.getenv('SLACKTOKEN')
+    config['mirrors'] = []
+    mirrors = {}
+    mirrors['discord']=int(os.getenv('DISCORDCHANNEL'))
+    mirrors['slack']=os.getenv('SLACKCHANNEL')
+    config['mirrors'].append(mirrors)
+    stateFile = '/state/state.json'
+else:
+    with open(configfile, 'rb') as j:
+        config = json.load(j)
 
 with open(stateFile, 'rb') as s:
         state = json.load(s)

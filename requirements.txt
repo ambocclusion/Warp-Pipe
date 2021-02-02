@@ -1,0 +1,5 @@
+asyncio==3.4.3
+discord.py==1.5.1
+requests==2.22.0
+slackclient==2.9.3
+webpreview==1.6.0
